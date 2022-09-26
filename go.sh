@@ -1,13 +1,12 @@
 #!/bin/bash
 
-#!/bin/bash
-
 
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
 set -e	# or use "set -o errexit" to quit on error.
 set -x  # or use "set -o xtrace" to print the statement before you execute it.
+
 
 go install github.com/nsf/gocode@latest
 go install github.com/bradfitz/goimports@latest
@@ -27,5 +26,4 @@ go install golang.org/x/lint/golint@latest
 go install github.com/davidrjenni/reftools/cmd/fillstruct@master
 go install github.com/go-delve/delve/cmd/dlv@master
 go install github.com/koron/iferr@master
-
 
